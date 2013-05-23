@@ -14,10 +14,12 @@ module DataMapper::Adapters
     # @option options [String] :namespace ('') Bucket namespace
     def initialize(name, options)
       super
-      
+      Riak.disable_list_keys_warnings = true
       @riak = Riak::Client.new(
-        :host   => options[:host],
-        :port   => options[:port],
+        :nodes=>[{
+            :host   => options[:host],
+            :http_port   => options[:port]
+        }],
         :prefix => options[:prefix]
       )
       @namespace = options[:namespace] ? options[:namespace] + ':' : ''

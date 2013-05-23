@@ -14,6 +14,7 @@ describe DataMapper::Adapters::RiakAdapter do
       property :num_spots, Integer
       property :striped,   Boolean
     end
+    DataMapper.finalize
   end
   
   after :all do
