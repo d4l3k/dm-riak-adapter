@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name        = "dm-riak-adapter"
-  s.version     = "0.1.0"
-  s.authors     = ["Mike Richards"]
+  s.version     = "0.1.1"
+  s.authors     = ["Mike Richards","Tristan Rice"]
   s.date        = "2010-11-21"
   s.description = "DataMapper adapter for Riak"
   s.summary     = "DataMapper adapter for Riak"
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   
   s.required_rubygems_version = ">= 1.3.6"
   
-  s.add_dependency "dm-core",     ["~> 1.0.0"]
-  s.add_dependency "riak-client", ["~> 0.8.0"]
+  s.add_dependency "dm-core",     ["~> 1.2.0"]
+  s.add_dependency "riak-client", ["~> 1.2.0"]
   s.add_development_dependency "rspec"
 end
